@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LENOVO\\Desktop\\Stage2\\timsoft\\timsoft.csproj": {}
+    "C:\\Users\\DADO MAZHOUD\\Desktop\\STAGE\\timsoft\\timsoft.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LENOVO\\Desktop\\Stage2\\timsoft\\timsoft.csproj": {
+    "C:\\Users\\DADO MAZHOUD\\Desktop\\STAGE\\timsoft\\timsoft.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\Stage2\\timsoft\\timsoft.csproj",
+        "projectUniqueName": "C:\\Users\\DADO MAZHOUD\\Desktop\\STAGE\\timsoft\\timsoft.csproj",
         "projectName": "timsoft",
-        "projectPath": "C:\\Users\\LENOVO\\Desktop\\Stage2\\timsoft\\timsoft.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LENOVO\\Desktop\\Stage2\\timsoft\\obj\\",
+        "projectPath": "C:\\Users\\DADO MAZHOUD\\Desktop\\STAGE\\timsoft\\timsoft.csproj",
+        "packagesPath": "C:\\Users\\DADO MAZHOUD\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DADO MAZHOUD\\Desktop\\STAGE\\timsoft\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DADO MAZHOUD\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

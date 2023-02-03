@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using timsoft.DataBase;
+using timsoft.repositories;
+using timsoft.services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,10 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<DataBaseContext>(
     o => o.UseNpgsql(builder.Configuration.GetConnectionString("Timsoft")));
+
+builder.Services.AddTransient<IQuestionRepository, QuestionRepository>();
+builder.Services.AddTransient<IQuestionService, QuestionService>();
+
 
 
 var app = builder.Build();

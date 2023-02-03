@@ -8,7 +8,8 @@ namespace timsoft.entities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int IdEpreuve { get; set; }
+        public int 
+            IdEpreuve { get; set; }
         public string? NomEpreuve { get; set; }
         public int Duree { get; set; }
         public int SommePoints { get; set; }
