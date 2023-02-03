@@ -18,5 +18,10 @@ namespace timsoft.entities
         [NotMapped]
         [JsonIgnore]
         public List<Réclamation> Réclamation { get; set; }
+        public Rôle Rôle { get; set; }
+
+        [NotMapped]
+        [JsonIgnore]
+        public List<UserEpreuve> UserEpreuves { get; set; }
     }
 }

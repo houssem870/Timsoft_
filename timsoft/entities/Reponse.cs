@@ -10,6 +10,6 @@ namespace timsoft.entities
         public int IdReponse { get; set; }
         public string? Flag { get; set; }
         public int NpRep { get; set; }
-        public List<Question> Questions {get; set;} 
+        public List<Question> Question {get; set;} 
     }
 }

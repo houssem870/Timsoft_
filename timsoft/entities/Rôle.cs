@@ -8,7 +8,8 @@ namespace timsoft.entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdRole { get; set; }
-        public string RoleName { get; set; }
+        public string? RoleName { get; set; }
+        public List<User> User { get; set; }
 
     }
 }

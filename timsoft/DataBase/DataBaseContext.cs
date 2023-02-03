@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using timsoft.entities;
-using Microsoft.EntityFrameworkCore.Design;
 
 namespace timsoft.DataBase
 {
@@ -13,6 +13,23 @@ namespace timsoft.DataBase
            => optionsBuilder.EnableSensitiveDataLogging();
 
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+           modelBuilder.Entity<User>().HasMany<Invitation>(u => u.Invitations).WithOne(i => i.User);
+           modelBuilder.Entity<Rôle>().HasMany<User>(r => r.User).WithOne(u => u.Rôle);
+           modelBuilder.Entity<Type_Epreuve>().HasMany<Epreuve>(t => t.Epreuve).WithOne(e => e.Type_Epreuves);
+
+           modelBuilder.Entity<UserEpreuve>().HasKey(ue => new { ue.IdUser, ue.IdEpreuve });
+           modelBuilder.Entity<UserEpreuve>().HasOne<User>(ue => ue.User).WithMany(u => u.UserEpreuves);
+           modelBuilder.Entity<UserEpreuve>().HasOne<Epreuve>(ue => ue.Epreuve).WithMany(e => e.UserEpreuves);
+           
+           modelBuilder.Entity<Reponse>().HasMany(R => R.Question).WithMany(R => R.Reponse).UsingEntity(j => j.ToTable("ReponseQuest"));
+
+           modelBuilder.Entity<Epreuve>().HasMany(e => e.Question).WithMany(e => e.Epreuve).UsingEntity(j => j.ToTable("REpreuveQuest"));
+
+           modelBuilder.Entity<User>().HasMany(u => u.Réclamation).WithMany(e => e.Users).UsingEntity(j => j.ToTable("UserReclam"));
+        }
+
         public DbSet<Invitation> Invitation { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<Epreuve> Epreuve { get; set; }
@@ -21,6 +38,7 @@ namespace timsoft.DataBase
         public DbSet<Question> Question { get; set; }
         public DbSet<Rôle> Rôle { get; set; }
         public DbSet<Type_Epreuve> Type_Epreuve { get; set; }
+        public DbSet<UserEpreuve> UserEpreuve { get; set;}
 
 
 

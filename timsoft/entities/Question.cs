@@ -16,7 +16,12 @@ namespace timsoft.entities
         public int NbRep { get; set; }
         [NotMapped]
         [JsonIgnore]
-        public List<Reponse> Reponses { get; set; }
+        public List<Reponse> Reponse { get; set; }
+
+        [NotMapped]
+        [JsonIgnore]
+        public List<Epreuve> Epreuve { get; set; }
+
 
     }
 }

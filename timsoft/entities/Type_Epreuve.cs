@@ -9,10 +9,10 @@ namespace timsoft.entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdType { get; set; }
-        public string Type { get; set; }
+        public string? Type { get; set; }
         [NotMapped]
         [JsonIgnore]
-        public List<Epreuve> Epreuves { get; set; }
+        public List<Epreuve> Epreuve { get; set; }
 
     }
 }
